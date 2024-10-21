@@ -12,3 +12,9 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the blog!
+
+## Technologies used
+- [https://nextjs.org/](Next.js)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Velite](https://velite.js.org/)

@@ -28,4 +28,8 @@ export default defineConfig({
         clean: true
     },
     collections: { posts },
+    mdx: {
+        rehypePlugins: [],
+        remarkPlugins: []
+    }
 })

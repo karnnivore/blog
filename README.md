@@ -8,7 +8,7 @@ Once you have the repository cloned, navigate to the project directory.
 And use the lts version of node.js (I personally use Node Version Manager (nvm) to manage my node versions):
 
 ```bash
-nvm use lts
+nvm use --lts
 ```
 
 First install the required packages:

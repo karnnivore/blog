@@ -1,4 +1,4 @@
-[Live Preview](blog-beta-one-49.vercel.app)
+[Live Preview](https://blog-beta-one-49.vercel.app/)
 
 ## Getting Started 
 First install the required packages:
@@ -32,7 +32,7 @@ The content of the blog post goes below the frontmatter. You can use Markdown sy
 The content is automatically rendered as a blog post on the website when you run the development server.
 
 ## Technologies used
-- [https://nextjs.org/](Next.js)
+- [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Velite](https://velite.js.org/)

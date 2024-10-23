@@ -1,5 +1,6 @@
+// Config for use throughout the site, allows for easy changes to site-wide settings
 export const siteConfig = {
-  name: "Nick's blog",
+  name: "Nick Chinsen",
   url: "http://localhost:3000",
   description: "Created by Nick Chinsen",
   links: {

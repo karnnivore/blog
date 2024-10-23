@@ -1,3 +1,4 @@
+import rehypePrettyCode from "rehype-pretty-code";
 import { defineConfig, defineCollection, s } from "velite";
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
@@ -5,9 +6,13 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
 
+/*
+  * Velite helps with creating types for the various posts that will be created in the blog.
+  * The schema is defined using zod which is a TypeScript schema library.
+*/
 const posts = defineCollection({
   name: "Post",
-  pattern: "blog/**/*.mdx",
+  pattern: "blog/**/*.md",
   schema: s
     .object({
       slug: s.path(),
@@ -15,7 +20,7 @@ const posts = defineCollection({
       description: s.string().max(1000).optional(),
       date: s.isodate(),
       published: s.boolean().default(true),
-      body: s.mdx(),
+      body: s.markdown(),
     })
     .transform(computedFields),
 });
@@ -31,7 +36,7 @@ export default defineConfig({
   },
   collections: { posts },
   mdx: {
-    rehypePlugins: [],
+    rehypePlugins: [[rehypePrettyCode, { theme: "github-dark" }]],
     remarkPlugins: [],
   },
 });
